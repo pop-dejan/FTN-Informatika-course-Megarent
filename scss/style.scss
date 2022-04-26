@@ -2,3 +2,182 @@
 @import 'mixins';
 
 @include main;
+
+header {
+    background: url("../slike/background.jpg");
+    height: 80vh;
+    background-size: cover;
+    padding-top: 1em;
+    nav {
+        background: white;
+        display: flex;
+        justify-content: space-between;
+        width: 60%;
+        margin: 0 auto;
+        padding: 0.5em;
+
+        h2 {
+            span {
+                color: $main_red;
+            }
+        }
+
+        ul {
+            display: flex;
+            list-style: none;
+            justify-content: space-evenly;
+            width: 60%;
+            li {
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    div {
+        margin-top: 15%;
+        h1, p {
+            color: white;
+            text-align: center;
+            width: 30%;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-weight: normal;
+            border-bottom: 1px solid $main_red;
+        }
+    }
+}
+
+section {
+    background: $grey_background;
+    height: 50vh;
+    padding-top: 5em;
+    h3 {
+        text-align: center;
+        margin-bottom: 2em;
+    }
+    .car-section {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        width: 80%;
+        margin: 0 auto;
+        div {
+            width: 15%;
+            text-align: center;
+            img {
+                width: 100%;
+            }
+            p {
+                text-align: center;
+            }
+            button {
+                background: $main_red;
+                color: white;
+                border: none;
+                padding: 0.5em 2em;
+            }
+        }
+    }
+}
+
+.table-section {
+    background: white;
+    table {
+        border-collapse: collapse;
+        width: 50%;
+        margin: 0 auto;
+        th, td {
+            padding: 0.5em 1em;
+            text-align: center;
+        }
+        thead {
+            tr {
+                background-color: $main_red;
+                th {
+                    color: white;
+                }
+                th:first-child {
+                    background-color: $red_dark;
+                }
+            }
+        }
+        tbody {
+            tr {
+                border-bottom: 1px solid $main_text_color;
+                td:first-child {
+                    background-color: $grey_background;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    background-color: black;
+    padding: 1em;
+    h4 {
+        width: 60%;
+        margin: 0 auto;
+        border-bottom: 1px solid $main_red; 
+        font-weight: normal;
+        span {
+            color: $main_red
+        }
+    }
+    .address-info {
+        display: flex;
+        justify-content: space-between;
+        width: 60%;
+        margin: 0 auto;
+        padding: 0.5em;
+        p {
+            font-style: italic;
+            color: white;
+            font-size: 0.8em;
+        }
+    }
+}
+
+@include tablet {
+    header {
+        nav {
+            width: 95%;
+        }
+
+        div {
+            margin-top: 20%;
+            h1, p {
+                width: 80%;
+            }
+        }
+    }
+
+    section {
+        height: 100vh;
+        .car-section {
+            div {
+                width: 50%;
+            }
+        }
+    }
+
+    footer {
+
+        h4 {
+            text-align: center;
+        }
+
+        .address-info {
+            flex-direction: column;
+            align-items: center;
+            p {
+                padding: 1em;
+            }
+        }
+    }
+}
