@@ -82,6 +82,9 @@ section .car-section div button {
 .table-section {
   background: white;
 }
+.table-section button {
+  display: none;
+}
 .table-section table {
   border-collapse: collapse;
   width: 50%;
@@ -161,6 +164,52 @@ footer .address-info p {
   }
   footer .address-info p {
     padding: 1em;
+  }
+}
+@media only screen and (max-width: 500px) {
+  header {
+    background: black;
+    height: 35vh;
+  }
+  header nav {
+    flex-direction: column;
+  }
+  header nav h2 {
+    font-size: 1em;
+  }
+  header nav ul {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  header div {
+    margin-top: 10%;
+  }
+
+  section {
+    height: 190vh;
+  }
+  section .car-section div {
+    width: 100%;
+  }
+  section .car-section div button {
+    padding: 2em 4em;
+  }
+
+  .table-section {
+    height: 30vh;
+    text-align: center;
+  }
+  .table-section table {
+    display: none;
+  }
+  .table-section button {
+    background: #ff3720;
+    color: white;
+    border: none;
+    padding: 0.5em 2em;
+    padding: 2em 4em;
+    display: inline-block;
   }
 }
 

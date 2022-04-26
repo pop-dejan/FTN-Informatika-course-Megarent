@@ -75,10 +75,7 @@ section {
                 text-align: center;
             }
             button {
-                background: $main_red;
-                color: white;
-                border: none;
-                padding: 0.5em 2em;
+              @include button-styles;
             }
         }
     }
@@ -86,6 +83,9 @@ section {
 
 .table-section {
     background: white;
+    button {
+        display: none;
+    }
     table {
         border-collapse: collapse;
         width: 50%;
@@ -178,6 +178,53 @@ footer {
             p {
                 padding: 1em;
             }
+        }
+    }
+}
+
+@include mobile {
+    header {
+        background: black;
+        height: 35vh;
+        nav {
+            flex-direction: column;
+            h2 {
+                font-size: 1em;
+            }
+            ul {
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+            }
+        }
+        div {
+            margin-top: 10%;
+        }
+    }
+
+    section {
+        height: 190vh;
+        .car-section {
+            div {
+                width: 100%;
+                button {
+                    padding: 2em 4em;
+                }
+            }
+        }
+    }
+
+    .table-section {
+        height: 30vh;
+        text-align: center;
+        table {
+            display: none;
+        }
+
+        button {
+            @include button-styles;
+            padding: 2em 4em;
+            display: inline-block;
         }
     }
 }
